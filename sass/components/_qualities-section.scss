@@ -1,0 +1,40 @@
+.qualities {
+    background-color: $white-color;
+}
+
+.qualities__list {
+    display: flex;
+}
+
+.qualities__item {
+    margin-right: 30px;
+    flex-basis: 270px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.qualities__field {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  margin-bottom: 30px;
+
+  border-radius: 4px;
+
+  background-color: $bg-section-color;
+}
+
+.qualities__title {
+    font-size: 0.875rem;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $title-color;
+}
+
+.qualities__text {
+    letter-spacing: 0.03em;
+    margin-top: 10px;
+}

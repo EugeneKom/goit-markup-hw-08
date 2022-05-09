@@ -1,0 +1,32 @@
+.clients {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clients__link {
+    display: flex;
+    text-decoration: none;
+
+    padding: 15px 31px;
+
+    border: 1px solid $basic-icon-color;
+    border-radius: 4px;
+
+    transition: border 250ms $animation-cubic;
+
+        &:hover,
+        &:focus {
+            border: 1px solid $hover-color;
+        }
+}
+
+.clients__icon {
+    fill: $basic-icon-color;
+    transition: fill 250ms $animation-cubic;
+
+        .clients__link:hover &,
+        .clients__link:focus & {
+            fill: $hover-color;
+        }
+}
+

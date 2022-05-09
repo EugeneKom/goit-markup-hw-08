@@ -1,0 +1,19 @@
+.logo {
+    font-family: "Raleway", serif;
+    font-size: 1.625rem;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    color: $title-color;
+
+    text-decoration: none;
+            display: inline-block;
+
+        &--accent {
+            color: $hover-color;
+        }
+  }
+
+.logo--white {
+    color: $white-color;
+}

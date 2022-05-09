@@ -1,0 +1,132 @@
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__title {
+    margin-bottom: 12px;
+
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color:$title-color;
+}
+
+.form__text {
+    margin-top: 10px;
+    margin-bottom: 4px;
+
+    font-size: 0.75rem;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+}
+
+.form__label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    transition: fill 250ms $animation-cubic;
+        &:focus-within {
+            fill: $hover-color;
+        }
+}
+
+.form__input {
+    width: 100%;
+    height: 40px;
+        padding: 0 42px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    color: $text-color;
+    transition: border 250ms $animation-cubic;
+        &:focus-within {
+            border: 1px solid #2196f3;
+        }
+}
+
+.form__input--big {
+    display: block;
+    
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+    
+    color: $text-color;
+     &::placeholder {
+        font-size: 0.75rem;
+        line-height: 1.67;
+        letter-spacing: 0.01em;
+     }
+}
+
+.form__icon {
+    position: absolute;
+    top: 39px;
+    left: 12px;
+
+    cursor: pointer;
+}
+
+.form__icon-off {
+    display: block;
+    margin-right: 7px;
+    width: 16px;
+    height: 15px;
+    
+    border-radius: 2px;
+    border: 2px solid $title-color;
+
+    .form__checkbox:checked ~ & {
+        display: none;
+    }
+}
+
+.form__icon-active {
+    display: none;
+    margin-right: 7px;
+    
+    background-color: $hover-color;
+    border-radius: 2px;
+    .form__checkbox:checked ~ & {
+        display: block;
+    }
+
+}
+
+
+.form__checkbox-label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 30px;
+    margin-top: 20px;
+
+    letter-spacing: 0.03em;
+}
+
+.form__checkbox--vis-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
+.form__link {
+    color: $hover-color;
+}
