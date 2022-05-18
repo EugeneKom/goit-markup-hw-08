@@ -1581,7 +1581,7 @@ li {
   letter-spacing: 0.03em;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .form__checkbox-label {
     font-size: 0.75rem;
     line-height: 1.16;
