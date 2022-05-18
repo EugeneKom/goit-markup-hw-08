@@ -18,37 +18,90 @@
     <header class="page-header">
         <div class="container container--row">
             <!-- Навигация -->
-            <nav class="navigation">
-                <a href="" class="logo"><span class="logo logo--accent">Web</span>Studio</a>
-                <ul class="navigation__list">
-                    <li class="navigation__item ">
-                        <a class="navigation__link" href="./index.html">Студия</a>
+            <div class="menu-container">
+                <nav class="navigation">
+                    <a href="" class="logo"><span class="logo logo--accent">Web</span>Studio</a>
+                    <ul class="navigation__list">
+                        <li class="navigation__item ">
+                            <a class="navigation__link " href="./index.html">Студия</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="./portfolio.html" class="navigation__link navigation__link--current">Портфолио</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="" class="navigation__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Контакты -->
+                <ul class="contacts">
+                    <li class="contacts__item">
+                        <a href="mailto:info@devstudio.com" class="contacts__link">
+                            <svg class="contacts__icon" width="16" height="12">
+                                <use href="./images/icons.svg#icon-envelope"></use>
+                            </svg>
+                            info@devstudio.com</a>
                     </li>
-                    <li class="navigation__item">
-                        <a href="./portfolio.html" class="navigation__link navigation__link--current">Портфолио</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="" class="navigation__link">Контакты</a>
+                    <li class="contacts__item">
+                        <a href="tel:+380961111111" class="contacts__link">
+                            <svg class="contacts__icon" width="10" height="16">
+                                <use href="./images/icons.svg#icon-tel"></use>
+                            </svg>
+                            +38 096 111 11 11</a>
                     </li>
                 </ul>
-            </nav>
-            <!-- Контакты -->
-            <ul class="contacts">
-                <li class="contacts__item">
-                    <a href="mailto:info@devstudio.com" class="contacts__link">
-                        <svg class="contacts__icon" width="16" height="12">
-                            <use href="./images/icons.svg#icon-envelope"></use>
-                        </svg>
-                        info@devstudio.com</a>
-                </li>
-                <li class="contacts__item">
-                    <a href="tel:+380961111111" class="contacts__link">
-                        <svg class="contacts__icon" width="10" height="16">
-                            <use href="./images/icons.svg#icon-tel"></use>
-                        </svg>
-                        +38 096 111 11 11</a>
-                </li>
-            </ul>
+            </div>
+            <div class="mobile-menu-container">
+                <a href="" class="logo"><span class="logo logo--accent">Web</span>Studio</a>
+                <div class="burger-menu" data-menu>
+                    <nav class="navigation">
+                        <ul class="navigation__list">
+                            <li class="navigation__item ">
+                                <a class="navigation__link " href="./index.html">Студия</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="./portfolio.html"
+                                    class="navigation__link navigation__link--current">Портфолио</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="" class="navigation__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- Контакты -->
+                    <ul class="contacts">
+                        <li class="contacts__item">
+                            <a href="tel:+380961111111" class="contacts__link contacts__link--big-accent">
+                                <svg class="contacts__icon" width="10" height="16">
+                                    <use href="./images/icons.svg#icon-tel"></use>
+                                </svg>
+                                +38 096 111 11 11</a>
+                        </li>
+                        <li class="contacts__item">
+                            <a href="mailto:info@devstudio.com" class="contacts__link">
+                                <svg class="contacts__icon" width="16" height="12">
+                                    <use href="./images/icons.svg#icon-envelope"></use>
+                                </svg>
+
+                                info@devstudio.com</a>
+                        </li>
+                    </ul>
+                    <ul class="burger-menu__socials">
+                        <li class="burger-menu__item"><a class="burger-menu__link burger-menu__link--padding-none"
+                                href="#">Instagram</a></li>
+                        <li class="burger-menu__item"><a class="burger-menu__link" href="#">Twitter</a></li>
+                        <li class="burger-menu__item"><a class="burger-menu__link" href="#">Facebook</a></li>
+                        <li class="burger-menu__item"><a class="burger-menu__link burger-menu__link--border-none"
+                                href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <button class="burger-button" type="button" data-menu-button>
+                    <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                        <use class="burger-button__icon-menu" href="images/icons.svg#nav-burger"></use>
+                        <use class="burger-button__icon-cross" href="images/icons.svg#nav-cross"></use>
+                    </svg>
+                </button>
+            </div>
         </div>
     </header>
     <!-- Контентная часть -->
@@ -67,14 +120,15 @@
                 <!-- Контент -->
                 <ul class="examples">
                     <li class="examples__item">
-                        <a href="" class="examples__card">
+                        <a href="" class="examples__card examples__card--flex">
                             <div class="examples__img-box">
-                                <img src="./images/laptop.jpg" alt="ноутбук" width="370">
+                                <img class="examples__images" srcset="./images/laptop@2x.jpg 2x"
+                                    src="./images/laptop.jpg" alt="ноутбук" width="370">
                                 <p class="examples__desc">Ресурс предлагает комплексные предложения с разным уровнем
                                     функционала и сервисов. Все это позволит посетителю получить
                                     исчерпывающие сведения о компании или частном лице.</p>
                             </div>
-                            <div class="examples__inner">
+                            <div class="examples__inner examples__inner--grow">
                                 <h2 class="examples__caption">Технокряк</h2>
                                 <p class="examples__subtitle">Веб-сайт</p>
                             </div>
@@ -83,7 +137,8 @@
                     <li class="examples__item">
                         <a href="" class="examples__card">
                             <div class="examples__img-box">
-                                <img src="./images/sport.jpg" alt="Постер" width="370">
+                                <img class="examples__images" srcset="./images/sport@2x.jpg 2x" src="./images/sport.jpg"
+                                    alt="Постер" width="370">
                                 <p class="examples__desc">Ресурс предлагает комплексные предложения с разным уровнем
                                     функционала и сервисов. Все это позволит посетителю получить
                                     исчерпывающие сведения о компании или частном лице.</p>
@@ -97,7 +152,8 @@
                     <li class="examples__item">
                         <a href="" class="examples__card">
                             <div class="examples__img-box">
-                                <img src="./images/fish.jpg" alt="рыба" width="370">
+                                <img class="examples__images" srcset="./images/fish@2x.jpg 2x" src="./images/fish.jpg"
+                                    alt="рыба" width="370">
                                 <p class="examples__desc">Ресурс предлагает комплексные предложения с разным уровнем
                                     функционала и сервисов. Все это позволит посетителю получить
                                     исчерпывающие сведения о компании или частном лице.</p>
@@ -111,7 +167,8 @@
                     <li class="examples__item">
                         <a href="" class="examples__card">
                             <div class="examples__img-box">
-                                <img src="./images/mus.jpg" alt="наушники" width="370">
+                                <img class="examples__images" srcset="./images/mus@2x.jpg 2x" src="./images/mus.jpg"
+                                    alt="наушники" width="370">
                                 <p class="examples__desc">Ресурс предлагает комплексные предложения с разным уровнем
                                     функционала и сервисов. Все это позволит посетителю получить
                                     исчерпывающие сведения о компании или частном лице.</p>
@@ -125,7 +182,8 @@
                     <li class="examples__item">
                         <a href="" class="examples__card">
                             <div class="examples__img-box">
-                                <img src="./images/box.jpg" alt="коробки" width="370">
+                                <img class="examples__images" srcset="./images/box@2x.jpg 2x" src="./images/box.jpg"
+                                    alt="коробки" width="370">
                                 <p class="examples__desc">Ресурс предлагает комплексные предложения с разным уровнем
                                     функционала и сервисов. Все это позволит посетителю получить
                                     исчерпывающие сведения о компании или частном лице.</p>
@@ -139,7 +197,8 @@
                     <li class="examples__item">
                         <a href="" class="examples__card">
                             <div class="examples__img-box">
-                                <img src="./images/monitor.jpg" alt="монитор" width="370">
+                                <img class="examples__images" srcset="./images/monitor@2x.jpg 2x"
+                                    src="./images/monitor.jpg" alt="монитор" width="370">
                                 <p class="examples__desc">Ресурс предлагает комплексные предложения с разным уровнем
                                     функционала и сервисов. Все это позволит посетителю получить
                                     исчерпывающие сведения о компании или частном лице.</p>
@@ -153,7 +212,8 @@
                     <li class="examples__item">
                         <a href="" class="examples__card">
                             <div class="examples__img-box">
-                                <img src="./images/book.jpg" alt="книга" width="370">
+                                <img class="examples__images" srcset="./images/book@2x.jpg 2x" src="./images/book.jpg"
+                                    alt="книга" width="370">
                                 <p class="examples__desc">Ресурс предлагает комплексные предложения с разным уровнем
                                     функционала и сервисов. Все это позволит посетителю получить
                                     исчерпывающие сведения о компании или частном лице.</p>
@@ -167,7 +227,8 @@
                     <li class="examples__item">
                         <a href="" class="examples__card">
                             <div class="examples__img-box">
-                                <img src="./images/lab.jpg" alt="бирка" width="370">
+                                <img class="examples__images" srcset="./images/lab@2x.jpg 2x" src="./images/lab.jpg"
+                                    alt="бирка" width="370">
                                 <p class="examples__desc">Ресурс предлагает комплексные предложения с разным уровнем
                                     функционала и сервисов. Все это позволит посетителю получить
                                     исчерпывающие сведения о компании или частном лице.</p>
@@ -181,7 +242,8 @@
                     <li class="examples__item">
                         <a href="" class="examples__card">
                             <div class="examples__img-box">
-                                <img src="./images/grow.jpg" alt="ноутбук" width="370">
+                                <img class="examples__images" srcset="./images/grow@2x.jpg 2x" src="./images/grow.jpg"
+                                    alt="ноутбук" width="370">
                                 <p class="examples__desc">Ресурс предлагает комплексные предложения с разным уровнем
                                     функционала и сервисов. Все это позволит посетителю получить
                                     исчерпывающие сведения о компании или частном лице.</p>
@@ -200,7 +262,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer__inner">
-            <div>
+            <div class="footer__contact">
                 <a href="" class="logo"><span class=" logo logo--accent">Web</span><span
                         class="logo logo--white">Studio</span></a>
                 <address class="address">
@@ -266,6 +328,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>

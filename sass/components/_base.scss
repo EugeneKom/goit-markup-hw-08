@@ -1,17 +1,21 @@
 .container {
-    width: 100%;
-    max-width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
-        &--row {
-            display: flex;
-            align-items: center;
-        }
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  @media screen and (min-width: 480px) {
+    width: 480px;
   }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
 
-  .button {
-    display: block;
+.button {
+  display: block;
   width: 200px;
   margin: 0 auto;
   padding-top: 10px;
@@ -31,6 +35,9 @@
 }
 
 .button--flex {
+  @media screen and (max-width: 1199px) {
+    margin: 0 auto;
+  }
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,45 +50,54 @@
 }
 
 .section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
     padding-top: 94px;
     padding-bottom: 94px;
   }
+}
 
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.section__title {
+  font-size: 1.75rem;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: $title-color;
+  @media screen and (min-width: 1200px) {
+    font-size: 2.25rem;
   }
+}
 
-  .section__title {
-        font-size: 2.25rem;
-      line-height: 1.16;
-      letter-spacing: 0.03em;
-      text-align: center;
-      color: $title-color;
-    }
+.section__title--margin-bot {
+  margin-bottom: 30px;
+  @media screen and (min-width: 769px) {
+    margin-bottom: 50px;
+  }
+}
 
-    .section__title--margin-bot {
-      margin-bottom: 50px;
-    }
+.socials {
+  display: flex;
+  justify-content: center;
+}
 
+.socials__item {
+  margin-right: 10px;
 
-    .socials {
-          display: flex;
-          justify-content: center;
-    }
-
-    .socials__item {
-        margin-right: 10px;
-      
-        &:last-child {
-          margin-right: 0;
-        }
-    }
+  &:last-child {
+    margin-right: 0;
+  }
+}

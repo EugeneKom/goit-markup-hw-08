@@ -1,32 +1,87 @@
 .hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
-  
-    background-color: $footer-color;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-color: $footer-color;
+  background-image: linear-gradient(
+      to top,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../../images/hero-480.jpg);
+
+  max-width: 1600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  @media screen and (min-width: 481px) {
     background-image: linear-gradient(
         to top,
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/hero.jpg);
-    max-width: 1600px;
-    margin: 0 auto;
+      url(../../images/hero-768.jpg);
+  }
+  @media screen and (min-width: 769px) {
+    background-image: linear-gradient(
+        to top,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../images/hero.jpg);
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        to top,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../images/hero-480@2x.jpg);
+    @media screen and (min-width: 481px) {
+      background-image: linear-gradient(
+          to top,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../../images/hero-768@2x.jpg);
+    }
+    @media screen and (min-width: 769px) {
+      background-image: linear-gradient(
+          to top,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../../images/hero-1200@2x.jpg);
+    }
+  }
+}
+
+.hero {
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+  }
 }
 
 .hero__title {
-    width: 696px;
-    margin: 0 auto;
-    margin-bottom: 30px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  font-size: 1.625rem;
+  line-height: 1.615;
+  font-weight: 900;
+  max-width: 360px;
 
-    font-weight: 900;
+  color: $white-color;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    max-width: 696px;
     font-size: 2.75rem;
     line-height: 1.36;
-    color: $white-color;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.class {
-    background-color: aqua;
+  }
 }

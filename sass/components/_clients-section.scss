@@ -1,32 +1,46 @@
 .clients {
-    display: flex;
-    justify-content: space-between;
+  margin: -15px;
+  display: flex;
+  //   justify-content: center;
+  @media screen and (max-width: 1199px) {
+    flex-wrap: wrap;
+  }
 }
 
 .clients__link {
-    display: flex;
-    text-decoration: none;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
 
-    padding: 15px 31px;
+  padding: 15px 0px;
 
-    border: 1px solid $basic-icon-color;
-    border-radius: 4px;
+  border: 1px solid $basic-icon-color;
+  border-radius: 4px;
 
-    transition: border 250ms $animation-cubic;
+  transition: border 250ms $animation-cubic;
 
-        &:hover,
-        &:focus {
-            border: 1px solid $hover-color;
-        }
+  &:hover,
+  &:focus {
+    border: 1px solid $hover-color;
+  }
 }
 
 .clients__icon {
-    fill: $basic-icon-color;
-    transition: fill 250ms $animation-cubic;
+  fill: $basic-icon-color;
+  transition: fill 250ms $animation-cubic;
 
-        .clients__link:hover &,
-        .clients__link:focus & {
-            fill: $hover-color;
-        }
+  .clients__link:hover &,
+  .clients__link:focus & {
+    fill: $hover-color;
+  }
 }
 
+.clients__item {
+  margin: 15px;
+  @media screen and (max-width: 767px) {
+    width: calc((100% - 15px * 4) / 2);
+  }
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 15px * 6) / 3);
+  }
+}

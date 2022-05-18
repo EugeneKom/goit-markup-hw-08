@@ -1,78 +1,88 @@
 .ourteam {
-    background-color: $bg-section-color;
+  background-color: $bg-section-color;
 }
 
-
 .ourteam__list {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    margin: -15px;
+  }
+}
+
+.ourteam__img {
+  width: 100%;
 }
 
 .ourteam__item {
-        margin-left: 30px;
-
-    background-color: $white-color;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 1px 1px rgba(0, 0, 0, 0.14),
+  background-color: $white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
-
-        &:first-child {
-            margin-left: 0;
-        }
+  border-radius: 0px 0px 4px 4px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    margin: 15px;
+    width: calc((100% - 4 * 15px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 8 * 15px) / 4);
+  }
 }
 
-
 .ourteam__profile {
+  padding: 30px 0 24px 0;
+  @media screen and (min-width: 1200px) {
     padding: 30px 32px 30px 32px;
+  }
 }
 
 .ourteam__name {
-    font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.19;
-    color: $title-color;
-    letter-spacing: 0.03em;
-    text-align: center;
-    margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.19;
+  color: $title-color;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .ourteam__profession {
-    font-size: 16px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-    text-align: center;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-align: center;
 
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
-
 
 .ourteam__link {
-    width: 44px;
-    height: 44px;
-    padding: 12px;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
 
+  border-radius: 50%;
+  transition: background-color 250ms $animation-cubic;
+  text-decoration: none;
+  display: block;
 
-    border-radius: 50%;
-    transition: background-color 250ms $animation-cubic;
-    text-decoration: none;
-    display: block;
-
-        &:hover,
-        &:focus {
-            background-color: $hover-color;
-        }
+  &:hover,
+  &:focus {
+    background-color: $hover-color;
+  }
 }
 
 .ourteam__icon {
-    fill: $basic-icon-color;
-    transition: fill 250ms $animation-cubic;
-
+  fill: $basic-icon-color;
+  transition: fill 250ms $animation-cubic;
 }
 
 .ourteam__icon {
-    .ourteam__link:hover &,
-    .ourteam__link:focus & {
-        fill: $white-color;
-    }
+  .ourteam__link:hover &,
+  .ourteam__link:focus & {
+    fill: $white-color;
+  }
 }
