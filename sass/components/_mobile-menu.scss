@@ -19,6 +19,7 @@
   background-color: $white-color;
 
   &.is-open {
+    position: fixed;
     display: flex;
     flex-direction: column;
   }
